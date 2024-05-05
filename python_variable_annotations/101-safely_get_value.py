@@ -1,12 +1,12 @@
 #!/usr/bin/env python3
 """type annotations"""
 
-from typing import Mapping, Any, Union, TypeVar
+from typing import Mapping, Any, Union, TypeVar, Optional
 
 T = TypeVar("T")
 
 
-def safely_get_value(dct: Mapping, key: Any, default: Union[T, None] = None
+def safely_get_value(dct: Mapping, key: Any, default: Optional[T] = None
                      ) -> Union[Any, T]:
     """annotations"""
     if key in dct:
