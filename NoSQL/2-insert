@@ -1,0 +1,3 @@
+#!/usr/bin/env python3
+obj = {'name': 'Holberton school'}
+db.school.insertOne(obj)
