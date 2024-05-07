@@ -1,3 +1,2 @@
 // inserts a document in the collection school
-obj = {'name': 'Holberton school'}
-db.school.insertOne(obj)
+db.school.insertOne({'name': 'Holberton school'})
