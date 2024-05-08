@@ -3,6 +3,7 @@
 from pymongo import MongoClient
 
 if __name__ == "__main__":
+    """connects to db"""
     client = MongoClient("mongodb://localhost:27017/")
 
     db = client.logs
