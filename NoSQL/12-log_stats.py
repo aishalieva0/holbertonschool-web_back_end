@@ -9,13 +9,15 @@ if __name__ == "__main__":
 
     db = client.logs
     nginx = db.nginx
-
-    print(nginx.count_documents({}), "logs")
+    logs = nginx.count_documents({})
+    print(f"{logs} logs")
+    methods = ["GET", "POST", "PUT", "PATCH", "DELETE"]
     print("Methods:")
-    print("\tmethod GET: ", nginx.count_documents({"method": "GET"}))
-    print("\tmethod POST: ", nginx.count_documents({"method": "POST"}))
-    print("\tmethod PUT: ", nginx.count_documents({"method": "PUT"}))
-    print("\tmethod PATCH: ", nginx.count_documents({"method": "PATCH"}))
-    print("\tmethod DELETE: ", nginx.count_documents({"method": "DELETE"}))
 
-    print(nginx.count_documents({"path": "/status"}), "status check")
+    for method in methods:
+        count = nginx.count_documents({"method": method})
+        print(f"\tmethod {method}: {count}")
+
+    status_count = nginx.count_documents({"method": "GET", "path": "/status"})
+
+    print(f"{status_count} status check")
