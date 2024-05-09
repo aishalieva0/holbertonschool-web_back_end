@@ -55,6 +55,8 @@ class Server:
             prev_page: number of the previous page, None if no previous page
             total_pages: total number of pages in the dataset as an integer
         """
+        assert type(page) == int and page > 0
+        assert type(page_size) == int and page_size > 0
 
         data = self.get_page(page, page_size)  # data per page
 
