@@ -3,7 +3,7 @@
 
 import csv
 import math
-from typing import List, Dict
+from typing import List, Dict, Any
 
 index_range = __import__("0-simple_helper_function").index_range
 # get_page = __import__("1-simple_pagination").get_page
@@ -40,7 +40,7 @@ class Server:
         except IndexError:
             []
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]::
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
         """
         Args:
             page (int, optional): Defaults to 1.
