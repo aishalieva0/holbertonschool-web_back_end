@@ -40,7 +40,7 @@ class Server:
         except IndexError:
             []
 
-    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]::
         """
         Args:
             page (int, optional): Defaults to 1.
