@@ -1,4 +1,4 @@
-/** eslint-disable */
+/* eslint-disable */
 export default class Building {
     constructor(sqft) {
         if (typeof this.evacuationWarningMessage !== 'function' && this.constructor !== Building) {
